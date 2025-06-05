@@ -19,10 +19,11 @@ function App() {
         {/* Public route for login */}
 
         {!isLoggedIn ? (
-          <Route
-            path="/login"
-            element={!isLoggedIn ? <Login /> : <Navigate to="/" replace />}
-          />
+          <>
+            <Route path="/login" element={<Login />} />
+
+            <Route path="*" element={<Navigate to="/login" replace />} />
+          </>
         ) : (
           <Route path="/" element={<Dashboard />} />
         )}
