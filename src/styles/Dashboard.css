@@ -1,0 +1,31 @@
+.alert-section {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    /* ensures both children match height */
+}
+
+.alert-form-wrapper {
+    width: 30%;
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.alert-table-wrapper {
+    width: 70%;
+    background: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure both children fill the same height */
+.alert-form-wrapper,
+.alert-table-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    /* or set a fixed height like 100% or 500px */
+}

@@ -1,0 +1,132 @@
+.main-content {
+    flex: 1;
+    padding: 30px;
+    background-color: #d7dce1;
+    margin-top: 15px;
+    border-radius: 25px;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    background-color: #0f0f3c;
+    color: #fff;
+    padding: 20px;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.user-info {
+    display: flex;
+    margin-top: 20px;
+    font-size: 14px;
+    align-items: center;
+}
+
+
+.user-info img {
+    border-radius: 50px;
+}
+
+.nav-menu {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 20px;
+}
+
+.nav-menu li {
+    padding: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #fff;
+}
+
+.nav-menu li.active {
+    font-weight: bold;
+    color: #ffc107;
+}
+
+.sub-item {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.dropdown {
+    display: none;
+    margin-top: 5px;
+}
+
+.dropdown.open {
+    display: block;
+}
+
+.main-wrapper {
+    flex: 1;
+    /* background-color: #f6f6f9; */
+    overflow-y: auto;
+}
+
+/* .main-content {
+    padding: 20px;
+} */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #cbcbcb;
+}
+
+.main-section {
+    /* background: #fff; */
+    /* padding: 20px; */
+    border-radius: 10px;
+}
+
+.notification-wrapper {
+    position: relative;
+    display: inline-block;
+    font-size: 20px;
+    color: #333;
+}
+
+.notification-count {
+    position: absolute;
+    top: -6px;
+    right: -12px;
+    background: rgb(255, 68, 68);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 0;
+    border-radius: 50%;
+    line-height: 1;
+    min-width: 16px;
+    text-align: center; }

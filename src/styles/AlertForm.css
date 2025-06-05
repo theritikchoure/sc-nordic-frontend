@@ -1,0 +1,74 @@
+.form-box h4 {
+    text-align: left;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.form-fields label {
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+    color: #333;
+    font-size: 14px;
+}
+
+.form-fields input,
+.form-fields select {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    margin-top: 6px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-fields input:focus,
+.form-fields select:focus {
+    border-color: #1e1e8f;
+}
+
+.radio-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 6px;
+}
+
+.radio-group label {
+    font-weight: normal;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+button[type="submit"] {
+    background-color: #1e1e8f;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 8px;
+    transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #141469;
+}
+
+.error {
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+    text-align: left;
+}
