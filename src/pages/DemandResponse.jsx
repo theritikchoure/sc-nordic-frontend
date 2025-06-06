@@ -1,9 +1,9 @@
 import AppLayout from "../layout/AppLayout";
 
-export default function Dashboard() {
+export default function DemandResponse() {
   return (
     <AppLayout>
-      <h2>Dashboard</h2>
+      <h2>Demand Response</h2>
     </AppLayout>
   )
 }

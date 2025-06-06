@@ -1,13 +1,12 @@
 import api from "../apiClient";
 
 // Fetch all alerts
-export async function fetchAlerts() {
+export async function fetchAlerts(page = 1, limit = 8) {
   try {
-    const response = await api.get("/alerts");
-      console.log("Alerts:", response.data.data);
-      return response.data;
+    const response = await api.get(`/alerts?page=${page}&limit=${limit}`);
+    return response.data;
   } catch (error) {
-    console.error("Error fetching alerts:", error);
+    console.error("Error", error);
   }
 }
 
@@ -15,21 +14,18 @@ export async function fetchAlerts() {
 export async function createAlert(alertData) {
   try {
     const response = await api.post("/alerts", alertData);
-      console.log("Created alert:", response.data.data);
-      return response.data;
+    return response.data;
   } catch (error) {
-    console.error("Error creating alert:", error);
+    console.error("Error", error);
   }
 }
-
 
 export async function deleteAlert(id) {
   try {
     const response = await api.delete(`/alerts/${id}`);
-    console.log("Alerts:", response.data.data);
     return response.data;
   } catch (error) {
     //   return error;
-    console.error("Error fetching alerts:", error);
+    console.error("Error", error);
   }
 }

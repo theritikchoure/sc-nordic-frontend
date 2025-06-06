@@ -61,20 +61,20 @@ function AlertForm() {
               <label>
                 Criteria
                 <div className="radio-group">
-                  <label>
+                  <label className="radio-option">
                     <Field type="radio" name="criteria" value="gt" />
                     Greater Than
                   </label>
-                  <label>
+                  <label className="radio-option">
                     <Field type="radio" name="criteria" value="lt" />
                     Less Than
                   </label>
-                  <ErrorMessage
-                    name="criteria"
-                    component="div"
-                    className="error"
-                  />
                 </div>
+                <ErrorMessage
+                  name="criteria"
+                  component="div"
+                  className="error"
+                />
               </label>
 
               <label>
@@ -106,8 +106,7 @@ function AlertForm() {
                 />
               </label>
 
-                          <label>
-                              Email
+              <label>
                 <Field name="email" type="email" placeholder="Email" />
                 <ErrorMessage name="email" component="div" className="error" />
               </label>

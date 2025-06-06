@@ -4,9 +4,8 @@ import api from "../apiClient";
 export async function login({username, password}) {
   try {
     const response = await api.post("/auth/login", {username, password});
-    console.log("Alerts:", response.data.data);
     return response.data;
   } catch (error) {
-    console.error("Error fetching alerts:", error);
+    console.error("Error:", error);
   }
 }

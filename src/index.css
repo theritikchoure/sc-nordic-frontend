@@ -17,30 +17,10 @@ body {
   padding: 20px;
 }
 
-.sidebar h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.user-info p {
-  margin: 0;
-  font-weight: bold;
-}
-
-.user-info span {
-  font-size: 12px;
-  color: #ccc;
-}
-
 .nav-menu {
   list-style: none;
   padding: 0;
   margin-top: 20px;
-}
-
-.nav-menu li {
-  margin: 10px 0;
-  cursor: pointer;
 }
 
 .nav-menu .sub-item {
@@ -62,7 +42,6 @@ body {
 
 .chart-box {
   margin-top: 30px;
-  padding: 20px;
   border: 1px solid #dedede;
   border-radius: 10px;
   background-color: #fafafa;

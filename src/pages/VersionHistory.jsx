@@ -1,9 +1,9 @@
 import AppLayout from "../layout/AppLayout";
 
-export default function Dashboard() {
+export default function VersionHistory() {
   return (
     <AppLayout>
-      <h2>Dashboard</h2>
+      <h2>Version History</h2>
     </AppLayout>
   )
 }

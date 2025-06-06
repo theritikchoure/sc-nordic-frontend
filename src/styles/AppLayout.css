@@ -19,12 +19,30 @@
     padding: 20px;
     flex-shrink: 0;
     transition: all 0.3s ease;
+    height: 100vh;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.sidebar::-webkit-scrollbar {
+    /* Chrome, Safari, Opera */
+    display: none;
+}
+
+.sidebar h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .sidebar-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #787878;
 }
 
 .hamburger {
@@ -38,14 +56,31 @@
 
 .user-info {
     display: flex;
+    gap: 15px;
     margin-top: 20px;
     font-size: 14px;
     align-items: center;
 }
 
+.user-avatar {
+    width: 50px;
+}
+
+.user-greeting {
+    font-weight: 600;
+    margin: 0;
+}
+
+.user-id {
+    font-size: 12px;
+}
 
 .user-info img {
     border-radius: 50px;
+}
+
+.user-details {
+    text-align: left;
 }
 
 .nav-menu {
@@ -55,16 +90,19 @@
     margin-top: 20px;
 }
 
-.nav-menu li {
+.nav-menu li,
+a {
     padding: 10px 0;
     cursor: pointer;
     display: flex;
     align-items: center;
     gap: 20px;
     color: #fff;
+    text-decoration: none;
 }
 
-.nav-menu li.active {
+
+.nav-menu li a .active {
     font-weight: bold;
     color: #ffc107;
 }
@@ -84,11 +122,16 @@
 
 .dropdown.open {
     display: block;
+    margin: 0;
+    padding: 0;
+    background-color: #464669;
+    border-radius: 10px;
 }
 
 .main-wrapper {
     flex: 1;
-    /* background-color: #f6f6f9; */
+    padding-right: 20px;
+    padding-bottom: 20px;
     overflow-y: auto;
 }
 
@@ -129,4 +172,5 @@
     border-radius: 50%;
     line-height: 1;
     min-width: 16px;
-    text-align: center; }
+    text-align: center;
+}

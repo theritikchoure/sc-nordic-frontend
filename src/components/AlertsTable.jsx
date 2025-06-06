@@ -3,35 +3,22 @@ import "../styles/AlertsTable.css";
 import { useEffect } from "react";
 import { deleteAlert, fetchAlerts } from "../api/endpoints/alerts";
 
-const dummyData = new Array(25).fill({
-  name: "Test Alert",
-  signal: "DK1",
-  criteria: "Less Than",
-  value: 0,
-  email: "mb@scnordic.com",
-  days: "Sun, Mon, Tue, Wed, Thu, Fri, Sat",
-});
 
 function AlertsTable() {
   const [currentPage, setCurrentPage] = useState(1);
+  const limit = 8;
+  const [pagination, setPagination] = useState(null);
   const [alerts, setAlerts] = useState([]);
-  const itemsPerPage = 7;
 
   useEffect(() => {
     loadData();
-  }, []);
+  }, [currentPage]);
 
   const loadData = async () => {
-    let res = await fetchAlerts();
+    let res = await fetchAlerts(currentPage, limit);
     setAlerts(res.data);
-    console.log(res);
+    setPagination(res.pagination);
   };
-
-  //   const totalPages = Math.ceil(dummyData.length / itemsPerPage);
-  //   const visibleData = dummyData.slice(
-  //     (currentPage - 1) * itemsPerPage,
-  //     currentPage * itemsPerPage
-  //   );
 
   const handleDeleteAlert = async (id) => {
     try {
@@ -88,13 +75,19 @@ function AlertsTable() {
                 <td>
                   <strong>{"DK-1"}</strong>
                 </td>
-                <td>{alert.criteria}</td>
+                <td>
+                  {alert.criteria === "gt" ? "Greater than" : "Less than"}
+                </td>
                 <td>
                   <strong>{alert.value}</strong>
                 </td>
                 <td>{alert.email}</td>
                 <td>
-                  <strong>{alert.days}</strong>
+                  <strong>
+                    {alert.frequency === "Everyday"
+                      ? "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+                      : "Mon, Tue, Wed, Thu, Fri"}
+                  </strong>
                 </td>
                 <td>
                   <button className="edit-btn">
@@ -117,7 +110,7 @@ function AlertsTable() {
         <button onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}>
           {"<"}
         </button>
-        {[...Array(5).keys()].map((num) => (
+        {[...Array(pagination?.totalPages).keys()].map((num) => (
           <button
             key={num + 1}
             className={currentPage === num + 1 ? "active" : ""}

@@ -1,0 +1,30 @@
+.power-cost-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 20px ;
+}
+
+.power-cost-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.power-cost-controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.power-cost-dropdown {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.power-cost-icon {
+    font-size: 1.2rem;
+    color: #555;
+    cursor: pointer; }
