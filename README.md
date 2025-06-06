@@ -1,12 +1,56 @@
-# React + Vite
+# SC-Nordic Frontend Setup
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React project bootstrapped with Vite.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js (>=14 recommended)
+- npm or yarn package manager
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/theritikchoure/sc-nordic-frontend.git
+cd sc-nordic-frontend
+```
+### 2. Install dependencies
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Setup environment variables
+Create a .env file in the project root and add the following variable:
+```bash
+VITE_API_BASE_URL=http://localhost:5000/api
+```
+
+### 4. Start the development server
+```bash
+npm run dev
+# or
+yarn dev
+```
+Your app will be running at http://localhost:3000 (or another port Vite chooses).
+
+
+### 5. Build for production
+```bash
+npm run build
+# or
+yarn build
+```
+The build files will be in the dist/ folder.
+
+
+## Additional Notes
+After modifying .env file, restart the dev server.
+
+Make sure your backend server is running and accessible at the URL set in VITE_API_BASE_URL.
